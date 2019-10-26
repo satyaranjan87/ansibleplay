@@ -1,0 +1,10 @@
+---
+
+- hosts: server
+  tasks:
+  - name: checking the uptime of the server
+    shell: uname -r
+    register: output
+  - debug:
+      var: output.stdout_lines
+...
